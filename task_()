@@ -1,0 +1,11 @@
+def is_correct_bracket(text): # задача со скобками
+    while "()" in text:
+        text = text.replace("()", "")
+    if len(text) != 0:
+        return False
+    return True
+
+
+
+txt = "()(())()((())((()))()(())"
+print(is_correct_bracket(txt))
