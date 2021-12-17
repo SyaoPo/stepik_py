@@ -1,0 +1,49 @@
+import re
+
+def cezar_en(text: str, step: int) -> str:
+    result = ""
+    for i in range(len(text)):
+        char = text[i]
+        if (65 <= ord(char) <= 90):
+            result += chr((ord(char) + step - 65) % 26 + 65)
+        elif (97 <= ord(char) <= 122):
+            result += chr((ord(char) + step - 97) % 26 + 97)
+        elif (1040 <= ord(char) <= 1103):
+            result += chr((ord(char) + step - 1040) % 66 + 1040)
+        else:
+            result += char
+    return result
+
+string = 'Day, mice. "Year" is a mistake!'
+
+dif_string = string.split(" ")
+
+for i in dif_string:
+    res = []
+    num = len_words(i)
+    res.append(cezar_en(i, num))
+    print(*res, end=" ")
+    
+def cezar_en(text: str, step: int) -> str:
+    result = ""
+    for i in range(len(text)):
+        char = text[i]
+        if (65 <= ord(char) <= 90):
+            result += chr((ord(char) + step - 65) % 26 + 65)
+        elif (97 <= ord(char) <= 122):
+            result += chr((ord(char) + step - 97) % 26 + 97)
+        elif (1040 <= ord(char) <= 1103):
+            result += chr((ord(char) + step - 1040) % 66 + 1040)
+        else:
+            result += char
+    return result
+
+string = 'Day, mice. "Year" is a mistake!'
+
+dif_string = string.split(" ")
+
+for i in dif_string:
+    res = []
+    num = len_words(i)
+    res.append(cezar_en(i, num))
+    print(*res, end=" ")
