@@ -1,0 +1,11 @@
+def fibonacci_even(num_: int):
+    fibo = [0, 1]
+    odd_fibo = []
+    [fibo.append(fibo[-2] + fibo[-1]) for i in range(50)]
+    for i in fibo:
+        if i % 2 == 0:
+            odd_fibo.append(i)
+    return odd_fibo[:num_]
+
+
+print(fibonacci_even(4))
